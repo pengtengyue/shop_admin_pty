@@ -1,16 +1,16 @@
 <template>
   <div class="login">
     <el-form ref="form" :rules="rules" :model="form" label-width="80px" status-icon>
-      <img src="@/assets/images/pty.jpg" alt="">
-      <el-form-item label="用户名" prop='username'>
+      <img src="@/assets/images/pty.jpg" alt />
+      <el-form-item label="用户名" prop="username">
         <el-input v-model="form.username"></el-input>
       </el-form-item>
-      <el-form-item label="密码" prop='password'>
-        <el-input v-model="form.password" type='password'></el-input>
+      <el-form-item label="密码" prop="password">
+        <el-input v-model="form.password" type="password"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click='login'>登入</el-button>
-        <el-button @click='ruleForm'>重置</el-button>
+        <el-button type="primary" @click="login">登入</el-button>
+        <el-button @click="ruleForm">重置</el-button>
       </el-form-item>
     </el-form>
   </div>
@@ -29,11 +29,21 @@ export default {
       rules: {
         username: [
           { required: true, message: '用户名不能为空', trigger: 'change' },
-          { min: 5, max: 12, message: '长度在 5 到 12 个字符', trigger: 'change' }
+          {
+            min: 5,
+            max: 12,
+            message: '长度在 5 到 12 个字符',
+            trigger: 'change'
+          }
         ],
         password: [
           { required: true, message: '密码不能为空', trigger: 'change' },
-          { min: 6, max: 12, message: '长度在 6 到 12 个字符', trigger: 'change' }
+          {
+            min: 6,
+            max: 12,
+            message: '长度在 6 到 12 个字符',
+            trigger: 'change'
+          }
         ]
       }
     }
