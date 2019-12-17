@@ -3,6 +3,11 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Login from '@/components/Login'
 import Home from '@/components/Home'
+import Users from '@/components/users/Users.vue'
+import Rights from '@/components/rights/Rights.vue'
+import Roles from '@/components/rights/Roles.vue'
+import Category from '@/components/goods/Category'
+import Goods from '@/components/goods/Goods'
 
 Vue.use(Router)
 
@@ -10,7 +15,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: Login
+      component: Home
     },
     {
       path: '/login',
@@ -18,7 +23,30 @@ const router = new Router({
     },
     {
       path: '/home',
-      component: Home
+      component: Home,
+      // 用于配置home路由的子路由
+      children: [
+        {
+          path: '/users',
+          component: Users
+        },
+        {
+          path: '/rights',
+          component: Rights
+        },
+        {
+          path: '/roles',
+          component: Roles
+        },
+        {
+          path: '/categories',
+          component: Category
+        },
+        {
+          path: '/goods',
+          component: Goods
+        }
+      ]
     }
   ]
 })
