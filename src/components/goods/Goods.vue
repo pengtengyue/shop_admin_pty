@@ -1,6 +1,6 @@
 <template>
   <div class="goods">
-    <el-button type='success' plain>添加商品</el-button>
+    <el-button type='success' plain @click="$router.push('/goods-add')">添加商品</el-button>
     <el-table
       :data="goodList"
     >
@@ -84,11 +84,11 @@ export default {
           pagesize: this.pageSize
         }
       })
-      console.log(res)
+      // console.log(res)
       if (res.meta.status === 200) {
         this.goodList = res.data.goods
         this.total = res.data.total
-        console.log(res)
+        // console.log(res)
       }
     },
     handleSizeChange(val) {
