@@ -9,7 +9,7 @@
         <el-input v-model="form.password" type="password" @keyup.enter.native="login"></el-input>
       </el-form-item>
       <el-form-item>
-        <el-button type="primary" @click="login">登入</el-button>
+        <el-button type="primary" @click="login">登入222WW</el-button>
         <el-button @click="ruleForm">重置</el-button>
       </el-form-item>
     </el-form>
