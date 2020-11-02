@@ -1,1 +1,9 @@
 练习git 命令
+
+git add . 提交到暂存区
+
+git commit -m 'xxx'  提交到仓库区
+
+git pull  取远程仓库下拉代码和本地的代码合并
+
+git push 将代码推送至远程
